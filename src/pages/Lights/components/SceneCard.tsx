@@ -29,7 +29,7 @@ const SceneSelectValues: SelectValue[] = [
 const SceneCard = () => {
   return (
     <div className="w-full mx-auto h-full sticky top-0">
-      <div className="relative h-[calc(100vh-150px)] bg-gray-900/50 backdrop-blur-xl rounded-2xl p-8 border border-gray-800">
+      <div className="relative min-h-[calc(100vh-150px)] bg-gray-900/50 backdrop-blur-xl rounded-2xl p-8 border border-gray-800">
         <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-pink-500 rounded-tl-2xl" />
         <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-red-400 rounded-tr-2xl" />
         <div className="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-yellow-500 rounded-bl-2xl" />
