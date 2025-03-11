@@ -17,6 +17,7 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.3.0",
     "smart-home-ui": "file:",
+    "styled-components": "^6.1.15",
     "tailwindcss": "^4.0.12"
   },
   "devDependencies": {
