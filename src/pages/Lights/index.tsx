@@ -1,5 +1,5 @@
 import LightCard from "./components/LightCard";
-import SceneCard from "./components/sceneCard";
+import SceneCard from "./components/SceneCard";
 
 const cardInfos = [
   {
