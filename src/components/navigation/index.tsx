@@ -2,7 +2,7 @@ import { Props } from "../../types";
 
 const Navigation = ({ children }: Props) => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 justify-center p-4 bg-white lg:row-start-2 lg:flex lg:flex-col lg:justify-between lg:rounded-none lg:items-end lg:p-0 lg:relative lg:col-span-1 lg:h-full">
+    <div className="fixed bottom-0 left-0 right-0 justify-center p-4 bg-dark lg:row-start-2 lg:flex lg:flex-col lg:justify-between lg:rounded-none lg:items-end lg:p-0 lg:relative lg:col-span-1 lg:h-full">
       {children}
     </div>
   );

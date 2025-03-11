@@ -1,15 +1,16 @@
 import { IButtonLink } from "../../types";
+import { Link } from "react-router-dom";
 
-const ButtonLink = ({ children, href }: IButtonLink) => {
+const ButtonLink = ({ children, to }: IButtonLink) => {
   return (
-    <a
-      href={href}
-      className="flex items-center justify-center w-12 h-12 rounded-full shadow-lg group bg-bgDark lg:hover:border-r-4 lg:hover:border-accent lg:rounded-none lg:w-40 lg:hover:bg-gradient-to-r from-white to-accentLight lg:py-10 lg:shadow-none lg:bg-white lg:focus:border-r-4 lg:focus:border-accent lg:focus:bg-gradient-to-r lg:focus:outline-none "
+    <Link
+      to={to}
+      className="flex items-center justify-center w-12 h-12 rounded-full shadow-lg group bg-dark lg:hover:border-r-4 lg:hover:border-accent-light lg:rounded-none lg:w-40 lg:hover:bg-linear-to-r from-accent-light to-dark lg:py-10 lg:shadow-none lg:bg-dark lg:focus:border-r-4 lg:focus:border-accent lg:focus:bg-linear-to-r lg:focus:outline-hidden "
     >
-      <div className="text-white group-hover:lg:text-white group-focus:lg:text-white lg:text-4xl lg:text-left lg:text-textBlue">
+      <div className="text-accent-light lg:group-hover:text-white lg:group-focus:text-white lg:text-4xl">
         {children}
       </div>
-    </a>
+    </Link>
   );
 };
 

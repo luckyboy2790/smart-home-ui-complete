@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-accent: rgba(0, 234, 255, 0.2);
+  --color-accent-light: #00eaff;
+  --color-dark: rgba(10, 10, 30, 0.9);
+}
+
 body {
-  background: #000;
+  background-color: rgba(10, 10, 30, 0.9);
+  color: #00eaff;
 }

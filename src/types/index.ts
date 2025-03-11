@@ -5,5 +5,5 @@ export interface Props {
 }
 
 export interface IButtonLink extends Props {
-    href: string;
+    to: string;
 }
