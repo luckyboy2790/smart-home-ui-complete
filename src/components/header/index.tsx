@@ -2,6 +2,7 @@ import { Props } from "../../types";
 import { AiFillLock } from "react-icons/ai";
 import { RiTvFill, RiVolumeMuteFill } from "react-icons/ri";
 import { FaTemperatureHigh } from "react-icons/fa";
+import { useAppContext } from "../../context/AppContext";
 
 const Header = ({ children }: Props) => {
   return (
@@ -13,16 +14,17 @@ const Header = ({ children }: Props) => {
 
 Header.Container = function HeaderContainer({ children }: Props) {
   return (
-    <div className="flex items-center justify-end w-11/12 py-5 mx-auto">
+    <div className="flex items-center justify-between w-11/12 py-5 mx-auto">
       {children}
     </div>
   );
 };
 
 Header.Title = function HeaderTitle() {
+  const { title } = useAppContext();
   return (
-    <div className="ml-2 text-4xl transition-colors cursor-pointer lg:text-6xl hover:text-accent lg:mr-2">
-
+    <div className="ml-2 text-2xl lg:text-4xl shadow-glow animate-pulseGlow font-bold">
+      {title}
     </div>
   );
 };

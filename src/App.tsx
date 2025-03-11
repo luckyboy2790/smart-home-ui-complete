@@ -12,8 +12,11 @@ import Pool from "./pages/Pool";
 import Intercom from "./pages/Intercom";
 import NoPage from "./pages/NoPage";
 import './App.css'
+import { useTitle } from './hooks'
 
 const App = () => {
+  useTitle();
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
