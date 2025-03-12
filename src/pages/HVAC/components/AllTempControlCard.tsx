@@ -29,16 +29,16 @@ const ClimateControllCard = ({
 
   return (
     <StyledWrapper status={status}>
-      <div className="card">
+      <div className="card 2xl:min-h-[calc(100vh-250px)] h-auto">
         <div className="heading">CLIMATE</div>
         <div className="flex flex-col justify-center items-center gap-6 w-full grow">
-          <div className="w-full py-5 px-6">
-            <h6 className="text-lg text-right w-full text-neutral-300">
+          <div className="w-full md:py-5 md:px-6 px-3 py-2.5">
+            <h6 className="md:text-lg text-base text-right w-full text-neutral-300">
               Current Temp is {currentTemp}°
             </h6>
           </div>
-          <div className="w-full py-5">
-            <h1 className="text-9xl text-center text-neutral-300">
+          <div className="w-full md:py-5 py-2.5">
+            <h1 className="md:text-9xl text-7xl text-center text-neutral-300">
               {targetTemp}°
             </h1>
           </div>
@@ -81,7 +81,6 @@ const StyledWrapper = styled.div<WrapperProps>`
   .card {
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 250px);
     background: linear-gradient(-45deg, #161616 0%, #000000 100%);
     color: #81818144;
     display: flex;

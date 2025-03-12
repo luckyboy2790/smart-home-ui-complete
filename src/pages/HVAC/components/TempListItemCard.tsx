@@ -36,7 +36,7 @@ const TempListItemCard = ({
 }) => {
   const [tagStatus, setTagStatus] = useState<TagLabel>(tempStatus);
   return (
-    <button className="group relative">
+    <button className="group relative min-w-3xl">
       <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-teal-500 via-emerald-500 to-green-500 opacity-20 blur-xl transition-all duration-500 group-hover:opacity-50 group-hover:blur-2xl" />
       <div className="relative flex items-center gap-2 rounded-xl border border-slate-800 bg-slate-950 pr-4 py-1 px-5">
         <div className="w-2/5 flex justify-start items-center gap-3">
