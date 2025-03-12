@@ -36,7 +36,7 @@ const SceneCard = () => {
         <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-pink-500 rounded-br-2xl" />
         <div className="relative flex flex-col justify-between gap-10 h-full">
           <h2 className="text-2xl font-bold mb-2 text-white text-center">
-            LIGHTING SCENES
+            SHADES SCENES
           </h2>
 
           <div className="flex flex-wrap gap-3 mb-8 text-gray-300 text-sm grow">
