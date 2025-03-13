@@ -16,7 +16,8 @@ const ClimateControllCard = ({
   targetTemp: number;
 }) => {
   const [status, setStatus] = React.useState<"cooling" | "heating">("heating");
-  const [targetTempState, setTargetTempState] = React.useState<number>(targetTemp);
+  const [targetTempState, setTargetTempState] =
+    React.useState<number>(targetTemp);
 
   useEffect(() => {
     const result: number = targetTempState - currentTemp;
@@ -52,12 +53,16 @@ const ClimateControllCard = ({
           </div>
         </div>
         <div className="h-auto flex justify-between">
-          <div className="flex justify-center items-center w-1/2 py-3 text-blue-500 text-4xl"
-            onClick={() => setTargetTempState(targetTempState - 1)}>
+          <div
+            className="flex justify-center items-center w-1/2 py-3 text-blue-500 text-4xl"
+            onClick={() => setTargetTempState(targetTempState - 1)}
+          >
             <CgArrowLongDownC />
           </div>
-          <div className="flex justify-center items-center w-1/2 py-3 text-red-500 text-4xl"
-            onClick={() => setTargetTempState(targetTempState + 1)}>
+          <div
+            className="flex justify-center items-center w-1/2 py-3 text-red-500 text-4xl"
+            onClick={() => setTargetTempState(targetTempState + 1)}
+          >
             <CgArrowLongUpC />
           </div>
         </div>
@@ -105,9 +110,9 @@ const StyledWrapper = styled.div<WrapperProps>`
     height: 101.3%;
     border-radius: 10px;
     background: ${({ status }) =>
-    status === "cooling"
-      ? "linear-gradient(-45deg, #0080ff 0%, #0055ff 10%)"
-      : "linear-gradient(-45deg, #ff0000 0%, #d80000 10%)"};
+      status === "cooling"
+        ? "linear-gradient(-45deg, #0080ff 0%, #0055ff 10%)"
+        : "linear-gradient(-45deg, #ff0000 0%, #d80000 10%)"};
     z-index: -10;
     pointer-events: none;
     transition: all 0.8s cubic-bezier(0.175, 0.95, 0.9, 1.275);
@@ -137,9 +142,9 @@ const StyledWrapper = styled.div<WrapperProps>`
   .card:hover::before {
     transform: scaleX(1.02) scaleY(1.02);
     box-shadow: ${({ status }) =>
-    status === "cooling"
-      ? "0px 0px 30px 0px hsla(210, 100%, 50%, 0.5)"
-      : "0px 0px 30px 0px hsla(0, 100%, 50%, 0.5)"};
+      status === "cooling"
+        ? "0px 0px 30px 0px hsla(210, 100%, 50%, 0.5)"
+        : "0px 0px 30px 0px hsla(0, 100%, 50%, 0.5)"};
   }
 `;
 
