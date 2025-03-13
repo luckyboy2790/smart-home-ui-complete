@@ -1,5 +1,5 @@
 import { AppLayout } from "../../components";
-import { HeaderContainer, MainContainer, NavigationContainer } from "../../containers";
+import { HeaderContainer, MainContainer, NavigationContainer, HelpContainer } from "../../containers";
 
 const Layout = () => {
     return (
@@ -7,6 +7,7 @@ const Layout = () => {
             <HeaderContainer />
             <NavigationContainer />
             <MainContainer />
+            <HelpContainer />
         </AppLayout>
     );
 };
