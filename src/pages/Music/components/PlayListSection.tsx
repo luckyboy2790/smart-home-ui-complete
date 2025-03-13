@@ -27,7 +27,7 @@ const PlayListSection = () => {
           </div>
         </div>
       </div>
-      <ul className="w-full grow flex flex-col overflow-y-auto">
+       <ul className="w-full grow flex flex-col overflow-y-auto">
         {PlayList.map((song, index) => (
           <li
             key={index}
