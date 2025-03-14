@@ -16,3 +16,10 @@ export interface AppContextType {
 export interface AppProviderProps {
     children: ReactNode;
 }
+
+export interface ButtonProps {
+    children: ReactNode;
+    className?: string;
+    onClick?: () => void;
+    disabled?: boolean;
+}
