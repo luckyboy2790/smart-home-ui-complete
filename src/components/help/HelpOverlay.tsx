@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
+import CustomSelect from "./LanguageSelect";
 
 interface HelpOverlayProps {
     onClose: () => void;
 }
 
 const HelpOverlay: React.FC<HelpOverlayProps> = ({ onClose }) => {
-    const [language, setLanguage] = useState<"en" | "fr">("en");
+    const [language, setLanguage] = useState<string>("English");
 
     // Close overlay on Escape key
     useEffect(() => {
@@ -48,22 +49,14 @@ const HelpOverlay: React.FC<HelpOverlayProps> = ({ onClose }) => {
                     </button>
 
                     {/* Language Selector with Neon Styling */}
-                    <div className="mb-4 text-center">
+                    <div className="mb-4 text-center flex items-center justify-center gap-2">
                         <label className="text-cyan-300 font-semibold">Language: </label>
-                        <select
-                            className="ml-2 border border-cyan-400 text-cyan-300 rounded px-2 py-1 
-                            focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                            value={language}
-                            onChange={(e) => setLanguage(e.target.value as "en" | "fr")}
-                        >
-                            <option value="en">English</option>
-                            <option value="fr">Français</option>
-                        </select>
+                        <CustomSelect setLanguage={setLanguage} />
                     </div>
 
                     {/* Help Content with Neon Theme */}
                     <div className="text-center text-cyan-200">
-                        {language === "en" ? (
+                        {language === "English" ? (
                             <p className="text-lg">Welcome! This section explains how to use the app efficiently.</p>
                         ) : (
                             <p className="text-lg">Bienvenue ! Cette section explique comment utiliser l'application efficacement.</p>
