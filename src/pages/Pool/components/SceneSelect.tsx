@@ -12,7 +12,7 @@ const SceneSelectValues: SelectValue[] = [
 ];
 
 const SceneSelect = () => {
-  const [selectedScene, setSelectedScene] = useState<string>("Romance"); // ✅ State to track selected option
+  const [selectedScene, setSelectedScene] = useState<string>("Romance");
 
   return (
     <StyledWrapper>
@@ -25,7 +25,7 @@ const SceneSelect = () => {
               className="radio-button__input"
               type="radio"
               checked={selectedScene === item.selectTitle}
-              onChange={() => setSelectedScene(item.selectTitle)} // ✅ Updates state when clicked
+              onChange={() => setSelectedScene(item.selectTitle)}
             />
             <label htmlFor={`radio-${index}`} className="radio-button__label">
               <span className="radio-button__custom" />
