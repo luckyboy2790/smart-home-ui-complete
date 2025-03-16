@@ -11,6 +11,8 @@ export interface IButtonLink extends Props {
 export interface AppContextType {
     title: string | null;
     setTitle: (user: string | null) => void;
+    alarmStatus: boolean;
+    setAlarmStatus: (status: boolean) => void;
 }
 
 export interface AppProviderProps {

@@ -32,7 +32,7 @@ Header.Title = function HeaderTitle() {
 };
 
 Header.Icons = function HeaderIcons() {
-  const [alarmOn, setAlarmOn] = useState(false);
+  const { alarmStatus, setAlarmStatus } = useAppContext();
   const [mute, setMute] = useState(false);
   const [acOn, setAcOn] = useState(false);
   const [tvOn, setTvOn] = useState(true);
@@ -41,12 +41,12 @@ Header.Icons = function HeaderIcons() {
     <div className="flex justify-center gap-6 lg:gap-8 p-4">
       {/* Alarm Toggle */}
       <button
-        className={`p-4 rounded-full transition-all duration-300 transform hover:scale-110 ${alarmOn ? "shadow-neon animate-neon-glow" : "hover:shadow-neon-soft"
+        className={`p-4 rounded-full transition-all duration-300 transform hover:scale-110 ${alarmStatus ? "shadow-neon animate-neon-glow" : "hover:shadow-neon-soft"
           }`}
-        onClick={() => setAlarmOn(!alarmOn)}
+        onClick={() => setAlarmStatus(!alarmStatus)}
         aria-label="Toggle Alarm"
       >
-        {alarmOn ? (
+        {alarmStatus ? (
           <IoMdNotifications className="text-3xl text-neon animate-neon-glow-pulse" />
         ) : (
           <IoMdNotificationsOff className="text-3xl text-gray-500" />

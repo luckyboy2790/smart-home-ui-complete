@@ -7,9 +7,10 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     const [title, setTitle] = useState<string | null>(null);
+    const [alarmStatus, setAlarmStatus] = useState<boolean>(false);
 
     return (
-        <AppContext.Provider value={{ title, setTitle }}>
+        <AppContext.Provider value={{ title, setTitle, alarmStatus, setAlarmStatus }}>
             {children}
         </AppContext.Provider>
     );
