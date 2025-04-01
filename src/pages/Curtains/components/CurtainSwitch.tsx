@@ -1,6 +1,9 @@
 import styled from "styled-components";
-import { HiLightBulb } from "react-icons/hi";
-import { BsFillLightbulbOffFill } from "react-icons/bs";
+import {
+  FaLongArrowAltDown,
+  FaLongArrowAltUp,
+  FaRegStopCircle,
+} from "react-icons/fa";
 
 const Radio = ({
   selectedValue,
@@ -23,7 +26,19 @@ const Radio = ({
             onChange={() => onChange("on")}
           />
           <span className="radio-tile">
-            <HiLightBulb />
+            <FaLongArrowAltUp className="text-2xl" />
+          </span>
+        </label>
+        <label>
+          <input
+            className="radio-input"
+            type="radio"
+            name={groupName}
+            checked={selectedValue === "stop"}
+            onChange={() => onChange("stop")}
+          />
+          <span className="radio-tile">
+            <FaRegStopCircle className="text-2xl" />
           </span>
         </label>
         <label>
@@ -35,7 +50,7 @@ const Radio = ({
             onChange={() => onChange("off")}
           />
           <span className="radio-tile">
-            <BsFillLightbulbOffFill className="text-xl" />
+            <FaLongArrowAltDown className="text-2xl" />
           </span>
         </label>
       </div>
