@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { CgArrowLongDownC, CgArrowLongUpC } from "react-icons/cg";
 import { BsSun, BsSnow2, BsPower } from "react-icons/bs";
 import { BiSolidLeaf } from "react-icons/bi";
+import thermostatIcon from "/src/assets/thermostat.png";
 
 interface WrapperProps {
   status: "cooling" | "heating";
@@ -32,7 +33,10 @@ const ClimateControllCard = ({
   return (
     <StyledWrapper status={status}>
       <div className="card 2xl:min-h-[calc(100vh-250px)] h-auto">
-        <div className="heading uppercase">Thermostat</div>
+        <div className="heading uppercase flex justify-start items-center">
+          <img src={thermostatIcon} alt="thermostat" className="w-14 h-14" />
+          Thermostat
+        </div>
         <div className="flex flex-col justify-center items-center gap-6 w-full grow">
           <div className="w-full md:py-5 md:px-6 px-3 py-2.5">
             <h6 className="md:text-lg text-base text-right w-full text-neutral-300">
