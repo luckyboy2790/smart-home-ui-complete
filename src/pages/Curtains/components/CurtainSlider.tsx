@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MdOutlineLightMode, MdLightMode } from "react-icons/md";
+import { FaLongArrowAltDown, FaLongArrowAltUp } from "react-icons/fa";
 
 const Slider = ({
   value,
@@ -10,7 +10,7 @@ const Slider = ({
 }) => {
   return (
     <StyledWrapper>
-      <MdOutlineLightMode />
+      <FaLongArrowAltDown className="text-2xl" />
       <label className="slider">
         <input
           type="range"
@@ -21,7 +21,7 @@ const Slider = ({
           onChange={(e) => onChange(Number(e.target.value))}
         />
       </label>
-      <MdLightMode />
+      <FaLongArrowAltUp className="text-2xl" />
     </StyledWrapper>
   );
 };
