@@ -1,20 +1,47 @@
 import styled from "styled-components";
 import { FaPlus, FaMinus } from "react-icons/fa";
-import { IoVolumeMute } from "react-icons/io5";
+import { IoVolumeMute, IoVolumeMedium } from "react-icons/io5";
+import { useState } from "react";
 
 const VolumnSection = () => {
+  const [volumnVal, setVolumnVal] = useState<number>(50);
   return (
     <StyledWrapper>
       <div className="w-full flex justify-between">
         <h3 className="text-base uppercase">Volumn</h3>
-        <IoVolumeMute className="cursor-pointer" />
+        {volumnVal > 0 ? (
+          <IoVolumeMute
+            className="cursor-pointer"
+            onClick={() => setVolumnVal(0)}
+          />
+        ) : (
+          <IoVolumeMedium
+            className="cursor-pointer"
+            onClick={() => setVolumnVal(100)}
+          />
+        )}
       </div>
       <div className="flex justify-between gap-4">
-        <FaMinus />
+        <FaMinus
+          onClick={() => {
+            setVolumnVal(volumnVal - 1);
+          }}
+        />
         <label className="slider">
-          <input type="range" className="level" min="0" max="100" />
+          <input
+            type="range"
+            className="level"
+            min="0"
+            max="100"
+            value={volumnVal}
+            onChange={(e) => setVolumnVal(Number(e.target.value))}
+          />
         </label>
-        <FaPlus />
+        <FaPlus
+          onClick={() => {
+            setVolumnVal(volumnVal + 1);
+          }}
+        />
       </div>
     </StyledWrapper>
   );
