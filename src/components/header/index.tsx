@@ -38,63 +38,58 @@ Header.Icons = function HeaderIcons() {
   const [tvOn, setTvOn] = useState(true);
 
   return (
-    <div className="flex justify-center gap-6 lg:gap-8 p-4">
+    <div className="flex justify-center gap-4 sm:gap-6 lg:gap-8 p-2 sm:p-3 lg:p-4">
       {/* Alarm Toggle */}
       <button
-        className={`p-4 rounded-full transition-all duration-300 transform hover:scale-110 ${alarmStatus ? "shadow-neon animate-neon-glow" : "hover:shadow-neon-soft"
-          }`}
+        className={`p-2 sm:p-3 rounded-full transition-all duration-300 transform hover:scale-105 ${alarmStatus ? "shadow-neon animate-neon-glow" : "hover:shadow-neon-soft"}`}
         onClick={() => setAlarmStatus(!alarmStatus)}
         aria-label="Toggle Alarm"
       >
         {alarmStatus ? (
-          <IoMdNotifications className="text-3xl text-neon animate-neon-glow-pulse" />
+          <IoMdNotifications className="text-xl sm:text-2xl lg:text-3xl text-neon animate-neon-glow-pulse" />
         ) : (
-          <IoMdNotificationsOff className="text-3xl text-gray-500" />
+          <IoMdNotificationsOff className="text-xl sm:text-2xl lg:text-3xl text-gray-500" />
         )}
       </button>
 
       {/* Mute Toggle */}
       <button
-        className={`p-4 rounded-full transition-all duration-300 transform hover:scale-110 ${mute ? "shadow-neon animate-neon-glow" : "hover:shadow-neon-soft"
-          }`}
+        className={`p-2 sm:p-3 rounded-full transition-all duration-300 transform hover:scale-105 ${mute ? "shadow-neon animate-neon-glow" : "hover:shadow-neon-soft"}`}
         onClick={() => setMute(!mute)}
         aria-label="Toggle Mute"
       >
         {mute ? (
-          <RiVolumeMuteFill className="text-3xl text-neon animate-neon-glow-pulse" />
+          <RiVolumeMuteFill className="text-xl sm:text-2xl lg:text-3xl text-neon animate-neon-glow-pulse" />
         ) : (
-          <RiVolumeUpFill className="text-3xl text-gray-500" />
+          <RiVolumeUpFill className="text-xl sm:text-2xl lg:text-3xl text-gray-500" />
         )}
       </button>
 
-      {/* Temperature Display (AC Toggle) */}
+      {/* AC Toggle */}
       <button
-        className={`p-4 rounded-full transition-all duration-300 transform hover:scale-110 ${acOn ? "shadow-neon animate-neon-glow" : "hover:shadow-neon-soft"
-          }`}
+        className={`p-2 sm:p-3 rounded-full transition-all duration-300 transform hover:scale-105 ${acOn ? "shadow-neon animate-neon-glow" : "hover:shadow-neon-soft"}`}
         onClick={() => setAcOn(!acOn)}
         aria-label="Toggle AC"
       >
         {acOn ? (
-          <MdOutlineAcUnit className="text-3xl text-neon animate-neon-glow-pulse" />
+          <MdOutlineAcUnit className="text-xl sm:text-2xl lg:text-3xl text-neon animate-neon-glow-pulse" />
         ) : (
-          <BsThermometerHalf className="text-3xl text-gray-500" />
+          <BsThermometerHalf className="text-xl sm:text-2xl lg:text-3xl text-gray-500" />
         )}
       </button>
 
       {/* TV Toggle */}
       <button
-        className={`p-4 rounded-full transition-all duration-300 transform hover:scale-110 ${tvOn ? "shadow-neon animate-neon-glow" : "hover:shadow-neon-soft"
-          }`}
+        className={`p-2 sm:p-3 rounded-full transition-all duration-300 transform hover:scale-105 ${tvOn ? "shadow-neon animate-neon-glow" : "hover:shadow-neon-soft"}`}
         onClick={() => setTvOn(!tvOn)}
         aria-label="Toggle TV Power"
       >
         <MdPowerSettingsNew
-          className={`text-3xl ${tvOn ? "text-neon animate-neon-glow-pulse" : "text-gray-500"
-            }`}
+          className={`text-xl sm:text-2xl lg:text-3xl ${tvOn ? "text-neon animate-neon-glow-pulse" : "text-gray-500"}`}
         />
       </button>
     </div>
   );
-}
+};
 
 export default Header;
