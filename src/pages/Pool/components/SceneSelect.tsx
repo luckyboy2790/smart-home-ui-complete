@@ -6,9 +6,12 @@ type SelectValue = {
 };
 
 const SceneSelectValues: SelectValue[] = [
-  { selectTitle: "Spa Mode" },
-  { selectTitle: "Romance" },
-  { selectTitle: "Sunset Swim" },
+  { selectTitle: "0 cm" },
+  { selectTitle: "40 cm" },
+  { selectTitle: "80 cm" },
+  { selectTitle: "130 cm" },
+  { selectTitle: "180 cm" },
+  { selectTitle: "240 cm" },
 ];
 
 const SceneSelect = () => {
