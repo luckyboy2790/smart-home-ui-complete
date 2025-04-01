@@ -17,7 +17,7 @@ const SceneCard = ({ tempStatus }: { tempStatus: "cooling" | "heating" }) => {
           </div>
         </div>
         <div className="flex flex-col px-4 py-4 gap-4 justify-between items-center">
-          <h3 className="text-3xl uppercase">Pool Scenes</h3>
+          <h3 className="text-3xl uppercase">Pool Depth</h3>
           <div className="flex flex-col w-full gap-2 grow overflow-y-auto h-[calc(100vh-390px)] min-h-[450px]">
             <SceneSelect />
           </div>
