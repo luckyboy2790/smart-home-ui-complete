@@ -16,7 +16,7 @@ const Header = ({ children }: Props) => {
 
 Header.Container = function HeaderContainer({ children }: Props) {
   return (
-    <div className="flex items-center justify-between w-11/12 py-5 mx-auto">
+    <div className="flex items-center justify-between w-11/12 mx-auto">
       {children}
     </div>
   );
