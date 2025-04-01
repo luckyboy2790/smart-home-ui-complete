@@ -1,14 +1,15 @@
 import { Navigation } from "../components";
 import { AiFillHome } from "react-icons/ai";
+import { MdThermostat } from "react-icons/md";
 import { FaSwimmingPool, FaWindowMaximize, FaPhone } from "react-icons/fa";
-import { RiDashboardFill, RiLightbulbFill, RiMusicFill, RiTvFill, RiCameraFill, RiShieldFill } from "react-icons/ri";
+import { RiLightbulbFill, RiMusicFill, RiTvFill, RiCameraFill, RiShieldFill } from "react-icons/ri";
 import ButtonLink from "../components/buttons/ButtonLink";
 
 const pages = [
   { name: "Home", icon: AiFillHome, to: "/" },
   { name: "Lights", icon: RiLightbulbFill, to: "/lights" },
   { name: "Curtains", icon: FaWindowMaximize, to: "/curtains" },
-  { name: "HVAC", icon: RiDashboardFill, to: "/hvac" },
+  { name: "HVAC", icon: MdThermostat, to: "/hvac" },
   { name: "Music", icon: RiMusicFill, to: "/music" },
   { name: "TV", icon: RiTvFill, to: "/tv" },
   { name: "Camera", icon: RiCameraFill, to: "/camera" },
