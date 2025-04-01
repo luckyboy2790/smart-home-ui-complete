@@ -1,4 +1,4 @@
-import { BsFire, BsSnow2, BsPower } from "react-icons/bs";
+import { BsSun, BsSnow2, BsPower } from "react-icons/bs";
 import { BiSolidLeaf } from "react-icons/bi";
 import classNames from "classnames";
 import { useState } from "react";
@@ -58,7 +58,7 @@ const TempListItemCard = ({
             className="flex justify-center items-center py-4 text-2xl text-red-500 cursor-pointer"
             onClick={() => setTagStatus("heat")}
           >
-            <BsFire />
+            <BsSun />
           </div>
           <div
             className="flex justify-center items-center py-4 text-2xl text-blue-500 cursor-pointer"

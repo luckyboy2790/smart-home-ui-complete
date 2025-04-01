@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { CgArrowLongDownC, CgArrowLongUpC } from "react-icons/cg";
-import { BsFire, BsSnow2, BsPower } from "react-icons/bs";
+import { BsSun, BsSnow2, BsPower } from "react-icons/bs";
 import { BiSolidLeaf } from "react-icons/bi";
 
 interface WrapperProps {
@@ -71,7 +71,7 @@ const ClimateControllCard = ({
             <BsPower />
           </div>
           <div className="flex justify-center items-center w-1/4 py-4 text-4xl text-red-500">
-            <BsFire />
+            <BsSun />
           </div>
           <div className="flex justify-center items-center w-1/4 py-4 text-4xl text-blue-500">
             <BsSnow2 />
@@ -110,9 +110,9 @@ const StyledWrapper = styled.div<WrapperProps>`
     height: 101.3%;
     border-radius: 10px;
     background: ${({ status }) =>
-      status === "cooling"
-        ? "linear-gradient(-45deg, #0080ff 0%, #0055ff 10%)"
-        : "linear-gradient(-45deg, #ff0000 0%, #d80000 10%)"};
+    status === "cooling"
+      ? "linear-gradient(-45deg, #0080ff 0%, #0055ff 10%)"
+      : "linear-gradient(-45deg, #ff0000 0%, #d80000 10%)"};
     z-index: -10;
     pointer-events: none;
     transition: all 0.8s cubic-bezier(0.175, 0.95, 0.9, 1.275);
@@ -142,9 +142,9 @@ const StyledWrapper = styled.div<WrapperProps>`
   .card:hover::before {
     transform: scaleX(1.02) scaleY(1.02);
     box-shadow: ${({ status }) =>
-      status === "cooling"
-        ? "0px 0px 30px 0px hsla(210, 100%, 50%, 0.5)"
-        : "0px 0px 30px 0px hsla(0, 100%, 50%, 0.5)"};
+    status === "cooling"
+      ? "0px 0px 30px 0px hsla(210, 100%, 50%, 0.5)"
+      : "0px 0px 30px 0px hsla(0, 100%, 50%, 0.5)"};
   }
 `;
 
