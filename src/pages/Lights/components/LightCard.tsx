@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Switch from "./LightSwitch";
 import Slider from "./Slider";
 
@@ -15,6 +15,14 @@ const Card = ({
 }) => {
   const [sliderValue, setSliderValue] = useState(brightness);
   const [selectedValue, setSelectedValue] = useState(isOn);
+
+  useEffect(() => {
+    if (sliderValue === 0) {
+      setSelectedValue("off");
+    } else {
+      setSelectedValue("on");
+    }
+  }, [sliderValue]);
 
   return (
     <div className="group relative flex flex-col rounded-xl bg-slate-950 p-4 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-indigo-500/20">
@@ -41,6 +49,7 @@ const Card = ({
             groupName={id}
             selectedValue={selectedValue}
             onChange={(value: string) => setSelectedValue(value)}
+            setSliderValue={setSliderValue}
           />
         </div>
       </div>
