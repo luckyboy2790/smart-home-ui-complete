@@ -6,10 +6,12 @@ const Radio = ({
   selectedValue,
   onChange,
   groupName,
+  setSliderValue,
 }: {
   selectedValue: string;
   onChange: (value: string) => void;
   groupName: string;
+  setSliderValue: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   return (
     <StyledWrapper>
@@ -20,7 +22,10 @@ const Radio = ({
             type="radio"
             name={groupName}
             checked={selectedValue === "on"}
-            onChange={() => onChange("on")}
+            onChange={() => {
+              onChange("on");
+              setSliderValue(100);
+            }}
           />
           <span className="radio-tile">
             <HiLightBulb />
@@ -32,7 +37,10 @@ const Radio = ({
             type="radio"
             checked={selectedValue === "off"}
             name={groupName}
-            onChange={() => onChange("off")}
+            onChange={() => {
+              onChange("off");
+              setSliderValue(0);
+            }}
           />
           <span className="radio-tile">
             <BsFillLightbulbOffFill className="text-xl" />
