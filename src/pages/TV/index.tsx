@@ -10,7 +10,7 @@ const TV = () => {
         <TVDisplaySelectCard />
         <TVFavouriteCard />
       </div>
-      <div className="2xl:w-1/3 w-full min-w-[480px] h-full">
+      <div className="2xl:w-1/3 w-full 2xl:min-w-[480px] h-full">
         <TVControllerSection />
       </div>
       <div className="2xl:w-1/3 w-full h-full">
