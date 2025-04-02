@@ -23,11 +23,11 @@ const TVKeyboardsSection = () => {
       </div>
 
       <div className="flex justify-center items-center my-3">
-        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[74px] h-[1px] bg-gray-600"></div>
+        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[71.8px] h-[1px] bg-gray-600"></div>
         <div className="mx-3"></div>
-        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[74px] h-[1px] bg-gray-600"></div>
+        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[71.8px] h-[1px] bg-gray-600"></div>
         <div className="mx-3"></div>
-        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[74px] h-[1px] bg-gray-600"></div>
+        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[71.8px] h-[1px] bg-gray-600"></div>
       </div>
 
       <div className="flex justify-center items-center">
@@ -49,11 +49,11 @@ const TVKeyboardsSection = () => {
       </div>
 
       <div className="flex justify-center items-center my-3">
-        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[74px] h-[1px] bg-gray-600"></div>
+        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[71.8px] h-[1px] bg-gray-600"></div>
         <div className="mx-3"></div>
-        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[74px] h-[1px] bg-gray-600"></div>
+        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[71.8px] h-[1px] bg-gray-600"></div>
         <div className="mx-3"></div>
-        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[74px] h-[1px] bg-gray-600"></div>
+        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[71.8px] h-[1px] bg-gray-600"></div>
       </div>
 
       <div className="flex justify-center items-center">
@@ -75,11 +75,11 @@ const TVKeyboardsSection = () => {
       </div>
 
       <div className="flex justify-center items-center my-3">
-        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[74px] h-[1px] bg-gray-600"></div>
+        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[71.8px] h-[1px] bg-gray-600"></div>
         <div className="mx-3"></div>
-        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[74px] h-[1px] bg-gray-600"></div>
+        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[71.8px] h-[1px] bg-gray-600"></div>
         <div className="mx-3"></div>
-        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[74px] h-[1px] bg-gray-600"></div>
+        <div className="min-[428px]:w-[88px] sm:w-[112px] w-[71.8px] h-[1px] bg-gray-600"></div>
       </div>
 
       <div className="flex justify-center items-center">
