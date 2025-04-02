@@ -13,7 +13,7 @@ const ZoneItemCard = ({
   const [doorStatus, setDoorStatus] = useState<boolean>(securityStatus);
 
   return (
-    <button className="group relative min-w-3xl">
+    <button className="group relative">
       <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-teal-500 via-emerald-500 to-green-500 opacity-20 blur-xl transition-all duration-500 group-hover:opacity-50 group-hover:blur-2xl" />
       <div className="relative py-4 flex lg:flex-row flex-col items-center gap-2 rounded-xl border border-slate-800 bg-slate-950 pr-4 px-5">
         <div
