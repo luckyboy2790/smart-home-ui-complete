@@ -36,18 +36,18 @@ const TempListItemCard = ({
 }) => {
   const [tagStatus, setTagStatus] = useState<TagLabel>(tempStatus);
   return (
-    <button className="group relative min-w-3xl">
+    <button className="group relative">
       <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-teal-500 via-emerald-500 to-green-500 opacity-20 blur-xl transition-all duration-500 group-hover:opacity-50 group-hover:blur-2xl" />
-      <div className="relative flex items-center gap-2 rounded-xl border border-slate-800 bg-slate-950 pr-4 py-1 px-5">
-        <div className="w-2/5 flex justify-start items-center gap-3">
+      <div className="relative flex lg:flex-row flex-col items-center gap-2 rounded-xl border border-slate-800 bg-slate-950 pr-4 py-1 px-5">
+        <div className="lg:w-2/5 w-full flex lg:justify-start justify-center items-center gap-3 lg:py-0 py-4">
           <Tag label={tagStatus} />
           <p className="text-sm uppercase">{itemName}</p>
         </div>
-        <div className="w-1/5 grow flex flex-col items-center justify-between gap-2 py-3">
+        <div className="lg:w-1/5 w-full grow flex flex-col items-center justify-between gap-2 py-3">
           <p className="text-xs">CURRENT TEMP</p>
           <h6 className="text-4xl">{currentTemp}</h6>
         </div>
-        <div className="w-2/5 flex justify-end gap-5">
+        <div className="lg:w-2/5 w-full flex lg:justify-end justify-center gap-5">
           <div
             className="flex justify-center items-center py-4 text-2xl text-neutral-500 cursor-pointer"
             onClick={() => setTagStatus("off")}
