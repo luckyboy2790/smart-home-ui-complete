@@ -1,19 +1,51 @@
+import { useState, useEffect } from "react";
 import CameraControllerSection from "./CameraControllerSection";
 import CameraSelect from "./CameraSelectSection";
 import CameraZoomSection from "./CameraZoomSection";
 
+const AUTO_HIDE_DELAY = 5000; // 5 seconds
+
 const CameraContent = () => {
+  const [showControls, setShowControls] = useState(false);
+
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (showControls) {
+      timeout = setTimeout(() => {
+        setShowControls(false);
+      }, AUTO_HIDE_DELAY);
+    }
+
+    return () => {
+      clearTimeout(timeout); // Cleanup on unmount or re-show
+    };
+  }, [showControls]);
+
+  const handleToggleControls = () => {
+    setShowControls(true);
+  };
+
   return (
-    <div className="w-full h-full overflow-auto bg-[#1b1b1bb0] flex lg:flex-row flex-col justify-between items-center relative group">
+    <div
+      className="w-full h-full overflow-auto bg-[#1b1b1bb0] flex lg:flex-row flex-col justify-between items-center relative"
+      onClick={handleToggleControls}
+    >
       <CameraSelect />
 
       <div className="grow h-full relative">
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 pointer-events-none group-hover:pointer-events-auto">
+        <div
+          className={`absolute inset-0 transition-opacity duration-500 delay-100 ${showControls ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
+        >
           <CameraControllerSection />
         </div>
       </div>
 
-      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 pointer-events-none group-hover:pointer-events-auto">
+      <div
+        className={`transition-opacity duration-500 delay-100 ${showControls ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
+      >
         <CameraZoomSection />
       </div>
     </div>
