@@ -87,3 +87,20 @@
 .animate-neon-glow-pulse {
     animation: neon-glow-pulse 1.5s infinite alternate;
 }
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+    height: 12px;
+    width: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}

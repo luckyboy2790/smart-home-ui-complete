@@ -1,5 +1,6 @@
 import PowerCheckbox from "./PowerCheckbox";
 import SharingCheckbox from "./SharingCheckbox";
+import ZoneVolumeSlider from "./ZoneVolumeSlider";
 
 const ShareCard = ({
   RoomName,
@@ -20,9 +21,12 @@ const ShareCard = ({
         <div className="w-full flex justify-center items-center">
           <h3 className="text-base text-center">{RoomName}</h3>
         </div>
-        <div className="flex justify-center items-center gap-5">
+        <div className="flex justify-center items-center gap-5 relative">
           <SharingCheckbox isShared={isShared} groupName={groupName} />
           <PowerCheckbox isOn={isOn} groupName={groupName} />
+        </div>
+        <div className="absolute right-0 top-2 z-10">
+          <ZoneVolumeSlider />
         </div>
       </div>
     </div>
