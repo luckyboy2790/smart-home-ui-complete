@@ -31,7 +31,7 @@ const TVDisplayOptionCard = () => {
               <ListboxOption
                 key={index}
                 value={room}
-                className="px-4 py-2 cursor-pointer text-xs"
+                className="px-4 py-2 cursor-pointer text-xs z-20"
               >
                 {room}
               </ListboxOption>

@@ -24,11 +24,7 @@ const TVDisplayOption = () => {
   return (
     <StyledWrapper>
       <label className="switch">
-        <input
-          type="checkbox"
-          checked={isChecked}
-          onChange={handleToggle}
-        />
+        <input type="checkbox" checked={isChecked} onChange={handleToggle} />
         <span className="slider" />
       </label>
 
@@ -70,6 +66,8 @@ const StyledWrapper = styled.div`
     border: 2px solid #383838;
     border-radius: 50px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 20px rgba(241, 9, 9, 0.8);
+    border: 2px solid #e70404;
   }
 
   .slider:before {
@@ -79,7 +77,7 @@ const StyledWrapper = styled.div`
     width: 1.4em;
     left: 0.2em;
     bottom: 0.2em;
-    background-color: rgb(0, 233, 116);
+    background-color: rgb(233, 0, 0);
     border-radius: inherit;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   }
@@ -87,6 +85,10 @@ const StyledWrapper = styled.div`
   .switch input:checked + .slider {
     box-shadow: 0 0 20px rgba(9, 241, 79, 0.8);
     border: 2px solid #04e763;
+  }
+
+  .switch input:checked + .slider:before {
+    background-color: rgb(0, 233, 116);
   }
 
   .switch input:checked + .slider:before {
