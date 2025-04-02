@@ -1,8 +1,25 @@
 import { useState } from "react";
 import styled from "styled-components";
+import ConfirmDialog from "../../../../components/dialog/ConfirmDialog";
+import { useConfirmDialog } from "../../../../hooks/useConfirmDialog";
 
 const TVDisplayOption = () => {
   const [isChecked, setIsChecked] = useState<boolean>(true);
+  const confirm = useConfirmDialog();
+
+  const handleToggle = () => {
+    if (isChecked) {
+      confirm.showDialog({
+        title: "Turn off display?",
+        description: "Are you sure you want to power off the display?",
+        confirmText: "Turn Off",
+        cancelText: "Cancel",
+        onConfirm: () => setIsChecked(false),
+      });
+    } else {
+      setIsChecked(true);
+    }
+  };
 
   return (
     <StyledWrapper>
@@ -10,10 +27,16 @@ const TVDisplayOption = () => {
         <input
           type="checkbox"
           checked={isChecked}
-          onChange={() => setIsChecked((prev) => !prev)}
+          onChange={handleToggle}
         />
         <span className="slider" />
       </label>
+
+      <ConfirmDialog
+        isOpen={confirm.isOpen}
+        options={confirm.options}
+        onClose={confirm.closeDialog}
+      />
     </StyledWrapper>
   );
 };
