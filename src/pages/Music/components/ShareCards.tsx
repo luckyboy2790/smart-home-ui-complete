@@ -25,7 +25,7 @@ const ShareCard = ({
           <SharingCheckbox isShared={isShared} groupName={groupName} />
           <PowerCheckbox isOn={isOn} groupName={groupName} />
         </div>
-        <div className="absolute right-0 top-2 z-10">
+        <div className="w-full">
           <ZoneVolumeSlider />
         </div>
       </div>
