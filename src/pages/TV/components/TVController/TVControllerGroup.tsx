@@ -2,8 +2,8 @@ import TVControllerButton from "./TVControllerButton";
 
 const TVControllerGroup = () => {
   return (
-    <div className="w-full flex justify-center items-center grow min-h-[458px]">
-      <div className="w-[458px] h-[458px] relative flex justify-center items-center">
+    <div className="w-full flex justify-center items-center grow min-h-[458px] overflow-hidden">
+      <div className="sm:w-[450px] w-[340px] sm:h-[450px] h-[380px] min-w-84 relative flex justify-center items-center">
         <div className="absolute top-15 w-full flex justify-center items-center">
           <TVControllerButton />
         </div>
@@ -17,7 +17,7 @@ const TVControllerGroup = () => {
           <TVControllerButton />
         </div>
 
-        <div className="bg-[#4d4d4d] w-30 h-30 rounded-full text-xs text-white flex items-center justify-center uppercase duration-200 active:scale-90 cursor-pointer">
+        <div className="bg-[#4d4d4d] sm:w-30 w-24 sm:h-30 h-24 rounded-full text-xs text-white flex items-center justify-center uppercase duration-200 active:scale-90 cursor-pointer">
           select
         </div>
       </div>
