@@ -24,9 +24,7 @@ const TVControllerSection = () => {
         <div>
           <TVControllerVideoVolumnSlider />
         </div>
-        <div>
-          <TVControllerGroup />
-        </div>
+        <TVControllerGroup />
         <div>
           <TVControllerButtonGroup />
         </div>
