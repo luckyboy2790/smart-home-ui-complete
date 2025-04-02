@@ -40,18 +40,7 @@ const OptionCard = ({ tempStatus }: { tempStatus: "cooling" | "heating" }) => {
   return (
     <StyledWrapper tempStatus={tempStatus}>
       <div className="card">
-        <div className="tools">
-          <div className="circle">
-            <span className="red box" />
-          </div>
-          <div className="circle">
-            <span className="yellow box" />
-          </div>
-          <div className="circle">
-            <span className="green box" />
-          </div>
-        </div>
-        <div className="flex flex-col px-4 py-4 gap-4 justify-between items-center">
+        <div className="flex flex-col px-4 py-4 gap-4 justify-between items-center pt-10">
           <h3 className="text-3xl uppercase">Selections</h3>
           <div className="flex flex-col w-full gap-2 grow overflow-y-auto h-[calc(100vh-390px)] min-h-[450px]">
             {OptionData.map((item, index) => (
@@ -89,37 +78,6 @@ const StyledWrapper = styled.div<WrapperProps>`
       tempStatus === "cooling"
         ? "0px 0px 25px 10px #0080ff"
         : "0px 0px 25px 10px #ff0000"};
-  }
-
-  .tools {
-    display: flex;
-    align-items: center;
-    padding: 9px;
-  }
-
-  .circle {
-    padding: 0 8px;
-  }
-
-  .box {
-    display: inline-block;
-    align-items: center;
-    width: 15px;
-    height: 15px;
-    padding: 1px;
-    border-radius: 50%;
-  }
-
-  .red {
-    background-color: #ff605c;
-  }
-
-  .yellow {
-    background-color: #ffbd44;
-  }
-
-  .green {
-    background-color: #00ca4e;
   }
 `;
 
