@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import ZoneItemBypassButton from "./ZoneItemBypassButton";
 import { IoWarning } from "react-icons/io5";
 import classNames from "classnames";
+import { FaBan, FaLock, FaUnlock } from "react-icons/fa";
 
 const ZoneItemCard = ({
   securityStatus,
   itemName,
+  showDialog,
 }: {
   securityStatus: boolean;
   itemName: string;
+  showDialog: (opts: { title: string; description: string; confirmText: string; icon: ReactNode; onConfirm: () => void }) => void;
 }) => {
   const [doorStatus, setDoorStatus] = useState<boolean>(securityStatus);
 
@@ -45,10 +48,56 @@ const ZoneItemCard = ({
             <span className="text-xs uppercase">Trouble</span>
           </div>
         </div>
-        <div className="lg:w-1/3 w-full flex justify-end gap-5">
+        <div className="lg:w-1/3 w-full flex flex-col sm:flex-row justify-end gap-2 sm:gap-4 mt-4 sm:mt-0">
+          {doorStatus ? (
+            <button
+              onClick={() =>
+                showDialog({
+                  title: `Disarm ${itemName}?`,
+                  description: "This will disarm the zone. Proceed?",
+                  confirmText: "Disarm",
+                  icon: <FaUnlock size={20} />,
+                  onConfirm: () => {
+                    console.log(`${itemName} disarmed`);
+                    setDoorStatus(false);
+                  },
+                })
+              }
+              className="px-4 py-2 rounded-md text-xs sm:text-sm bg-red-500 text-white hover:bg-red-400 transition shadow-[0_0_6px_#ff0044] min-w-[88px]"
+            >
+              DISARM
+            </button>
+          ) : (
+            <button
+              onClick={() =>
+                showDialog({
+                  title: `Arm ${itemName}?`,
+                  description: "This will arm the zone. Continue?",
+                  confirmText: "Arm",
+                  icon: <FaLock size={20} />,
+                  onConfirm: () => {
+                    console.log(`${itemName} armed`);
+                    setDoorStatus(true);
+                  },
+                })
+              }
+              className="px-4 py-2 rounded-md text-xs sm:text-sm bg-green-500 text-black hover:bg-green-400 transition shadow-[0_0_6px_#00ff88] min-w-[88px]"
+            >
+              ARM
+            </button>
+          )}
+
           <ZoneItemBypassButton
             onClick={() => {
-              setDoorStatus(!doorStatus);
+              showDialog({
+                title: `Bypass ${itemName}?`,
+                description: "This will bypass the zone. Proceed?",
+                confirmText: "Bypass",
+                icon: <FaBan size={20} />,
+                onConfirm: () => {
+                  console.log(`${itemName} bypassed`);
+                },
+              });
             }}
           />
         </div>

@@ -1,3 +1,5 @@
+import ConfirmDialog from "../../../components/dialog/ConfirmDialog";
+import { useConfirmDialog } from "../../../hooks/useConfirmDialog";
 import ZoneItemCard from "./ZoneItemCard";
 
 type TempItem = {
@@ -37,6 +39,8 @@ const TempItemData: TempItem[] = [
 ];
 
 const ZonesSection = () => {
+  const confirmDialog = useConfirmDialog();
+
   return (
     <div className="card w-full h-full bg-[#07182E] rounded-2xl relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,183,255,0.5)]">
       <div className="card-content h-[calc(100vh-250)] p-4 relative z-10 flex flex-col gap-5">
@@ -47,10 +51,16 @@ const ZonesSection = () => {
               key={index}
               securityStatus={item.securityStatus}
               itemName={item.itemName}
+              showDialog={confirmDialog.showDialog}
             />
           ))}
         </div>
       </div>
+      <ConfirmDialog
+        isOpen={confirmDialog.isOpen}
+        options={confirmDialog.options}
+        onClose={confirmDialog.closeDialog}
+      />
     </div>
   );
 };

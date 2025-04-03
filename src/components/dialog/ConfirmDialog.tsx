@@ -11,6 +11,7 @@ type ConfirmDialogProps = {
         confirmText?: string;
         cancelText?: string;
         onConfirm: () => void;
+        icon?: React.ReactNode;
     } | null;
     onClose: () => void;
 };
@@ -77,7 +78,7 @@ export default function ConfirmDialog({ isOpen, options, onClose }: ConfirmDialo
                                     transition={{ duration: 0.8, ease: "easeInOut" }}
                                     className="text-[#00ff80] drop-shadow-[0_0_6px_#00ff80]"
                                 >
-                                    <FaPowerOff size={20} />
+                                    {options.icon || <FaPowerOff size={20} />}
                                 </motion.div>
 
                                 <h2
