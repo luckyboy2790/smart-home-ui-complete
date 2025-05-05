@@ -28,9 +28,9 @@ const StyledWrapper = styled.div`
     flex-grow: 1;
     --slider-width: 100%;
     --slider-height: 5px;
-    --slider-bg: rgb(82, 82, 82);
+    --slider-bg: rgb(150, 150, 150, 0.8);
     --slider-border-radius: 999px;
-    --level-color: #00eaff;
+    --level-color: #000000cc;
     --level-transition-duration: 0.1s;
     --icon-margin: 15px;
     --icon-color: var(--slider-bg);

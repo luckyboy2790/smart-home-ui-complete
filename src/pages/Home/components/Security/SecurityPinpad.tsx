@@ -55,7 +55,7 @@ const SecurityPinPad = () => {
         ].map((item, index) => (
           <button
             key={index}
-            className="w-[58px] h-[58px] flex flex-col items-center justify-center text-lg font-bold rounded-full bg-gray-800 hover:bg-gray-700"
+            className="w-[58px] h-[58px] flex flex-col items-center justify-center text-lg font-bold rounded-full bg-[#7e7e7eab] hover:bg-[#6e6e6e] cursor-pointer"
             onClick={() => {
               if (item.num !== undefined) handleNumberClick(item.num);
               if (item.action === "clear") handleClear();
@@ -65,7 +65,7 @@ const SecurityPinPad = () => {
             {item.num !== undefined ? (
               <>
                 <span>{item.num}</span>
-                <span className="text-[9px] text-gray-400">{item.text}</span>
+                <span className="text-[9px] text-white">{item.text}</span>
               </>
             ) : (
               item.label

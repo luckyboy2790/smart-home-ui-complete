@@ -38,7 +38,7 @@ const StyledWrapper = styled.div`
     border-radius: 10px;
     gap: 20px;
     backdrop-filter: blur(30px);
-    background-color: rgba(2, 6, 24, 0.7);
+    background-color: rgba(191, 191, 191, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.089);
     cursor: pointer;
   }
@@ -54,7 +54,7 @@ const StyledWrapper = styled.div`
     font-weight: 500;
     font-size: 0.4em;
     letter-spacing: 1.2px;
-    color: rgb(197, 197, 197);
+    color: rgb(255, 255, 255);
   }
 
   .temp {
@@ -96,7 +96,7 @@ const StyledWrapper = styled.div`
   .minTemp {
     font-size: 0.4em;
     font-weight: 500;
-    color: rgb(197, 197, 197);
+    color: rgb(255, 255, 255);
   }
 `;
 

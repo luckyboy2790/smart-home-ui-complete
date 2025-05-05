@@ -20,11 +20,11 @@ const MediaTVSelect = () => {
           setSelectedRoom(value);
         }}
       >
-        <ListboxButton className="flex w-full items-center justify-between gap-2 px-4 py-2 text-sm bg-gray-900 rounded-md">
+        <ListboxButton className="flex w-full items-center justify-between gap-2 px-4 py-2 text-sm bg-[#57575799] rounded-md">
           <span>{selectedRoom}</span>
-          <IoIosArrowDown className="text-blue-500" />
+          <IoIosArrowDown className="text-[#42424299]" />
         </ListboxButton>
-        <ListboxOptions className="absolute mt-2 w-full bg-gray-800 text-white rounded-md shadow-lg">
+        <ListboxOptions className="absolute mt-2 w-full bg-[#57575799] text-white rounded-md shadow-lg">
           {rooms.map((room, index) => (
             <ListboxOption
               key={index}

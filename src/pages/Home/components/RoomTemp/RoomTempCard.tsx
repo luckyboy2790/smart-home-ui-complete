@@ -95,7 +95,7 @@ const StyledWrapper = styled.div<WrapperProps>`
   .card {
     position: relative;
     width: 100%;
-    background: linear-gradient(-45deg, #161616 0%, #000000 100%);
+    background: linear-gradient(-45deg, #8f8f8f8f 0%, #bdbdbdbf 100%);
     color: #81818144;
     display: flex;
     flex-direction: column;
@@ -116,7 +116,7 @@ const StyledWrapper = styled.div<WrapperProps>`
     height: 101.3%;
     border-radius: 10px;
     background-color: ${({ status }) =>
-    status === "cooling" ? "#0080ff" : "#d80000"};
+      status === "cooling" ? "#0080ff80" : "#d8000080"};
     transition: background-color 0.8s ease-in-out, transform 0.8s ease-in-out;
     z-index: -10;
     pointer-events: none;
@@ -146,9 +146,9 @@ const StyledWrapper = styled.div<WrapperProps>`
   .card:hover::before {
     transform: scaleX(1.02) scaleY(1.02);
     box-shadow: ${({ status }) =>
-    status === "cooling"
-      ? "0px 0px 30px 0px hsla(210, 100%, 50%, 0.5)"
-      : "0px 0px 30px 0px hsla(0, 100%, 50%, 0.5)"};
+      status === "cooling"
+        ? "0px 0px 30px 0px hsla(210, 100%, 50%, 0.5)"
+        : "0px 0px 30px 0px hsla(0, 100%, 50%, 0.5)"};
   }
 `;
 

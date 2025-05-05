@@ -4,12 +4,10 @@
 @theme {
   --color-accent: rgba(0, 234, 255, 0.2);
   --color-accent-light: #00eaff;
-  --color-dark: rgba(10, 10, 30, 0.9);
   --font-orbitron: 'Orbitron', sans-serif;
 }
 
 body {
-  background-color: rgba(10, 10, 30, 0.9);
-  color: #00eaff;
+  color: #ffffff;
   @apply font-orbitron;
 }

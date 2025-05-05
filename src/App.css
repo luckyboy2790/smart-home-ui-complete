@@ -7,12 +7,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #020618;
+    background: #00000044;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #020618;
+    background: #00000023;
 }
 
 @keyframes glow-pulse {
@@ -34,46 +34,46 @@
 
 @keyframes neon-pulse {
     0% {
-        box-shadow: 0 0 5px rgba(0, 234, 255, 0.5);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     }
 
     50% {
-        box-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
     }
 
     100% {
-        box-shadow: 0 0 5px rgba(0, 234, 255, 0.5);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     }
 }
 
 @keyframes neon-glow-pulse {
     0% {
-        text-shadow: 0 0 5px rgba(0, 234, 255, 0.5);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     }
 
     50% {
-        text-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
     }
 
     100% {
-        text-shadow: 0 0 5px rgba(0, 234, 255, 0.5);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     }
 }
 
 .shadow-neon-text-glow {
-    text-shadow: 0 0 12px #00eaff, 0 0 15px #00eaff;
+    text-shadow: 0 0 12px #ffffff, 0 0 15px #ffffff;
 }
 
 .text-neon {
-    color: #00EAFF;
+    color: #ffffff;
 }
 
 .shadow-neon {
-    box-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
 .shadow-neon-soft {
-    box-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .animate-glow-pulse {

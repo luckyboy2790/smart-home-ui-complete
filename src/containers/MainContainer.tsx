@@ -4,13 +4,23 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const transitionSettings = {
   duration: 0.6,
-  ease: [0.25, 0.1, 0.25, 1], // Smooth cubic-bezier easing
+  ease: [0.25, 0.1, 0.25, 1],
 };
 
 const variants = {
   initial: { opacity: 0, x: 50, filter: "blur(8px)" },
-  animate: { opacity: 1, x: 0, filter: "blur(0px)", transition: transitionSettings },
-  exit: { opacity: 0, x: -50, filter: "blur(8px)", transition: transitionSettings },
+  animate: {
+    opacity: 1,
+    x: 0,
+    filter: "blur(0px)",
+    transition: transitionSettings,
+  },
+  exit: {
+    opacity: 0,
+    x: -50,
+    filter: "blur(8px)",
+    transition: transitionSettings,
+  },
 };
 
 const MainContainer = () => {
@@ -27,7 +37,8 @@ const MainContainer = () => {
             animate="animate"
             exit="exit"
             layout
-            className="text-3xl font-semibold">
+            className="text-3xl font-semibold"
+          >
             <Outlet />
           </motion.section>
         </AnimatePresence>
