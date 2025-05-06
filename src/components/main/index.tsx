@@ -2,14 +2,14 @@ import { Props } from "../../types";
 
 const Main = ({ children }: Props) => {
   return (
-    <div className="min-w-full pt-2 pb-15 lg:py-2 max-h-[calc(100vh-150px)] overflow-y-scroll lg:row-start-2 lg:justify-start lg:flex lg:flex-col lg:col-start-2 lg:col-span-full lg:text-xl lg:h-screen lg:min-w-min lg:mx-8 lg:mt-4">
+    <div className="min-w-full py-6 z-2 max-h-[calc(100vh-177px)] overflow-y-scroll row-start-2 justify-start flex flex-col md:col-start-2 col-start-1 col-span-full text-xl h-screen px-8 bg-[#797979e0] rounded-xl">
       {children}
     </div>
   );
 };
 
 Main.Container = function mainContainer({ children }: Props) {
-  return <div className="w-11/12 gap-4 py-8 mx-auto">{children}</div>;
+  return <div className="w-full gap-4">{children}</div>;
 };
 
 export default Main;

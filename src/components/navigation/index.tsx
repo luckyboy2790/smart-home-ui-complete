@@ -2,20 +2,26 @@ import { Props } from "../../types";
 
 const Navigation = ({ children }: Props) => {
   return (
-    <div className="z-10 fixed bottom-0 max-h-[calc(100vh-68px)] overflow-y-scroll left-0 right-0 justify-center p-4 bg-[#b8b5b57a] lg:row-start-2 lg:flex lg:flex-col lg:justify-between lg:rounded-none lg:items-end lg:p-0 lg:relative lg:col-span-1 lg:h-full">
-      {children}
+    <div className="row-start-1 h-15 col-span-full">
+      <div className="fixed md:top-0 top-3 max-[767px]:left-0 md:h-screen md:w-auto w-screen flex flex-col justify-center items-center">
+        <div className="z-10 md:w-17 md:max-h-1/2 w-3/5 max-h-17 p-2 rounded-[10000px] overflow-y-scroll justify-center bg-[#797979cc] shadow-sm shadow-gray-400">
+          {children}
+        </div>
+      </div>
     </div>
   );
 };
 
 Navigation.Nav = function NavigationNav({ children }: Props) {
   return (
-    <ul className="w-full flex justify-center gap-3 lg:flex-col">{children}</ul>
+    <ul className="w-full flex md:justify-center justify-start gap-3 md:flex-col flex-row">
+      {children}
+    </ul>
   );
 };
 
 Navigation.NavItem = function NavigationNavItem({ children }: Props) {
-  return <li>{children}</li>;
+  return <li className="flex justify-center items-center">{children}</li>;
 };
 
 export default Navigation;
