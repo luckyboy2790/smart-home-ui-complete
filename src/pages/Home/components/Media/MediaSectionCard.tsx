@@ -7,11 +7,11 @@ const MediaSectionCard = () => {
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r opacity-20 blur-sm transition-opacity duration-300 group-hover:opacity-30" />
       <div className="absolute inset-px rounded-[11px]" />
       <div className="relative flex flex-col justify-between items-center w-full h-full gap-5">
-        <div className=" w-full flex items-center justify-between">
-          <h3 className="text-base font-semibold text-white 2xl:text-xl text-start">
+        <div className="w-full flex sm:flex-row flex-col gap-2 items-center justify-between">
+          <h3 className="text-base font-semibold text-white 2xl:text-xl text-start md:w-auto w-full">
             Media
           </h3>
-          <div className="text-sm text-start text-white">
+          <div className="text-sm text-start text-white sm:w-auto w-full">
             <MediaTVSelect />
           </div>
         </div>

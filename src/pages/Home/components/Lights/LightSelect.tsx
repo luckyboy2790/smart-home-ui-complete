@@ -17,7 +17,7 @@ const CustomSelect = ({
   const [selectedRoom, setSelectedRoom] = useState(rooms[0]);
 
   return (
-    <div className="relative text-white z-10 w-50">
+    <div className="relative text-white z-10 sm:w-50 w-full">
       <Listbox
         value={selectedRoom}
         onChange={(value) => {

@@ -33,8 +33,8 @@ const RoomTemp = ({
   return (
     <StyledWrapper status={status}>
       <div className="card h-full">
-        <div className="heading">
-          <p className="text-xl">CLIMATE</p>
+        <div className="heading sm:flex-row flex-col">
+          <p className="text-xl w-full">CLIMATE</p>
           <RoomTempSelect />
         </div>
         <div className="flex flex-col justify-center items-center gap-6 w-full grow">

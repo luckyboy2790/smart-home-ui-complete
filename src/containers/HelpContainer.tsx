@@ -10,9 +10,9 @@ const HelpContainer = () => {
       {/* Help Button */}
       <button
         aria-label="Help"
-        className="fixed bottom-[6rem] z-10 right-6 lg:bottom-[2rem] lg:right-6 text-white p-4
-                rounded-full shadow-[0px_0px_12px_#ffffff] transition-all hover:scale-110 hover:shadow-[0px_0px_20px_#ffffff]
-                focus:outline-none focus:ring-4 focus:ring-white"
+        className="fixed bottom-[1rem] z-10 right-6 lg:bottom-[2rem] lg:right-6 text-[#5c5c5c] p-4
+                rounded-full shadow-[0px_0px_12px_#5c5c5c] transition-all hover:scale-110 hover:shadow-[0px_0px_20px_#5c5c5c]
+                focus:outline-none focus:ring-4 focus:ring-[#5c5c5c]"
         onClick={() => setShowHelp(true)}
       >
         <MdQuestionMark className="w-8 h-8" />

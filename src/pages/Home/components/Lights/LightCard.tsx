@@ -11,13 +11,13 @@ const LightCard = ({ id, isOn }: { id: string; isOn: string }) => {
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r opacity-20 blur-sm transition-opacity duration-300 group-hover:opacity-30" />
       <div className="absolute inset-px rounded-[11px]" />
       <div className="relative flex flex-col justify-between w-full h-full gap-5">
-        <div className="mb-4 flex items-center justify-between">
-          <div className="flex items-center justify-between gap-2">
+        <div className="mb-4 flex sm:flex-row flex-col gap-2 items-center justify-between">
+          <div className="flex sm:w-auto w-full items-center justify-between gap-2">
             <h3 className="text-base font-semibold text-white 2xl:text-xl">
               Lights
             </h3>
           </div>
-          <div className="flex items-center justify-between gap-2">
+          <div className="flex sm:w-auto w-full items-center justify-between gap-2">
             <CustomSelect setRoomName={setRoomName} />
           </div>
         </div>
