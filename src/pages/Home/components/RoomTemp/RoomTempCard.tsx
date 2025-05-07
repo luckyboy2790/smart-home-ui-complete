@@ -32,7 +32,7 @@ const RoomTemp = ({
 
   return (
     <StyledWrapper status={status}>
-      <div className="card h-full">
+      <div className="card h-full transition-all duration-300 hover:!bg-[#3b3b3baf]">
         <div className="heading sm:flex-row flex-col">
           <p className="text-xl sm:w-auto w-full font-black">CLIMATE</p>
           <RoomTempSelect />

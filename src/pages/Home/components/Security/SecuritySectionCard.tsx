@@ -5,7 +5,7 @@ import { GoShieldLock } from "react-icons/go";
 
 const SecuritySectionCard = () => {
   return (
-    <div className="group h-full w-full relative flex flex-col rounded-xl bg-[#bfbfbfcc] p-4 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-indigo-500/20">
+    <div className="group h-full w-full relative flex flex-col rounded-xl bg-[#bfbfbfcc] transition-all duration-300 hover:!bg-[#3b3b3baf] p-4 shadow-2xl hover:scale-[1.02] hover:shadow-indigo-500/20">
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r opacity-20 blur-sm transition-opacity duration-300 group-hover:opacity-30" />
       <div className="absolute inset-px rounded-[11px]" />
       <div className="relative flex flex-col justify-between items-center w-full h-full gap-5">

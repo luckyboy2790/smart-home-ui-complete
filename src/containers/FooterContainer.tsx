@@ -13,7 +13,7 @@ const FooterContainer = () => {
             <li key={item} className="flex justify-center items-center">
               <button
                 onClick={() => setSelected(item)}
-                className={`flex px-5 md:h-13 h-10 w-auto items-center justify-center rounded-full group transition-all duration-200 ${
+                className={`flex px-5 md:h-13 h-10 w-auto items-center justify-center rounded-full group transition-all duration-200 hover:bg-[#666666b4] ${
                   selected === item
                     ? "bg-[#9e9e9ecc] text-white"
                     : "bg-transparent"

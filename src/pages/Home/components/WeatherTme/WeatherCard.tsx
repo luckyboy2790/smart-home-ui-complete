@@ -6,7 +6,7 @@ const WeatherCard = () => {
   return (
     <StyledWrapper>
       <div className="cardContainer">
-        <div className="card">
+        <div className="card transition-all duration-300 hover:!bg-[#47474799] shadow-2xl hover:scale-[1.02] hover:shadow-indigo-500/20">
           <WeatherPart />
           <TimePart />
         </div>
