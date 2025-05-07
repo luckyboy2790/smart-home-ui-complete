@@ -27,10 +27,10 @@ const StyledWrapper = styled.div`
   .slider {
     flex-grow: 1;
     --slider-width: 100%;
-    --slider-height: 5px;
-    --slider-bg: rgb(150, 150, 150, 0.8);
+    --slider-height: 8px;
+    --slider-bg: rgb(255, 255, 255, 0.8);
     --slider-border-radius: 999px;
-    --level-color: #000000cc;
+    --level-color: #00e8ff75;
     --level-transition-duration: 0.1s;
     --icon-margin: 15px;
     --icon-color: var(--slider-bg);

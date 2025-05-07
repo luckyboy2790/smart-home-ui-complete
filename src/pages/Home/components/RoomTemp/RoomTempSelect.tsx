@@ -13,14 +13,14 @@ const RoomTempSelect = () => {
   const [selectedRoom, setSelectedRoom] = useState(rooms[0]);
 
   return (
-    <div className="relative text-white z-10 sm:w-50 w-full">
+    <div className="relative text-white z-10 sm:w-45 w-full">
       <Listbox
         value={selectedRoom}
         onChange={(value) => {
           setSelectedRoom(value);
         }}
       >
-        <ListboxButton className="flex w-full items-center justify-between gap-2 px-4 py-2 text-sm bg-[#57575799] rounded-md">
+        <ListboxButton className="flex items-center justify-between gap-2 px-4 py-2 text-sm bg-[#57575799] rounded-md w-full whitespace-nowrap">
           <span>{selectedRoom}</span>
           <IoIosArrowDown className="text-[#42424299]" />
         </ListboxButton>

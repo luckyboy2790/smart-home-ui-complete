@@ -34,7 +34,7 @@ const RoomTemp = ({
     <StyledWrapper status={status}>
       <div className="card h-full">
         <div className="heading sm:flex-row flex-col">
-          <p className="text-xl w-full">CLIMATE</p>
+          <p className="text-xl sm:w-auto w-full font-black">CLIMATE</p>
           <RoomTempSelect />
         </div>
         <div className="flex flex-col justify-center items-center gap-6 w-full grow">
@@ -126,7 +126,6 @@ const StyledWrapper = styled.div<WrapperProps>`
 
   .heading {
     text-transform: capitalize;
-    font-weight: 900;
     color: white;
     display: flex;
     width: 100%;
