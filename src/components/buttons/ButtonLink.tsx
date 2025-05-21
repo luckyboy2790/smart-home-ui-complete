@@ -5,6 +5,8 @@ const ButtonLink = ({ children, to, active }: IButtonLink) => {
   return (
     <Link
       to={to}
+      draggable={false}
+      onDragStart={(e) => e.preventDefault()}
       className={`flex md:w-13 w-10 md:h-13 h-10 items-center justify-center px-auto rounded-full group hover:bg-[#636363b4] ${
         active ? "bg-[#9e9e9ecc]" : "bg-transparent"
       }`}
