@@ -28,23 +28,29 @@ const CameraContent = () => {
 
   return (
     <div
-      className="w-full h-full overflow-auto bg-[#1b1b1bb0] flex lg:flex-row flex-col justify-between items-center relative"
+      className="w-full h-full overflow-auto flex lg:flex-row flex-col justify-between items-center relative"
       onClick={handleToggleControls}
     >
       <CameraSelect />
 
       <div className="grow h-full relative">
         <div
-          className={`absolute inset-0 transition-opacity duration-500 delay-100 ${showControls ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-            }`}
+          className={`absolute inset-0 transition-opacity duration-500 delay-100 ${
+            showControls
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
+          }`}
         >
           <CameraControllerSection />
         </div>
       </div>
 
       <div
-        className={`transition-opacity duration-500 delay-100 ${showControls ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          }`}
+        className={`transition-opacity duration-500 delay-100 ${
+          showControls
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
       >
         <CameraZoomSection />
       </div>

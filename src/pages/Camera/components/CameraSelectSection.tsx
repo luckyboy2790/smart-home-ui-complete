@@ -21,12 +21,12 @@ const CameraSelect = () => {
         }}
       >
         <div className="relative w-full">
-          <ListboxButton className="flex w-full items-center justify-between gap-2 px-4 py-2 text-xs border border-gray-500 bg-transparent rounded-md">
+          <ListboxButton className="flex w-full items-center justify-between gap-2 px-4 py-2 text-xs border border-gray-200 bg-transparent rounded-md">
             <span>{selectedRoom}</span>
             <TiArrowUnsorted className="text-white" />
           </ListboxButton>
 
-          <ListboxOptions className="absolute top-full left-0 mt-1 w-full bg-transparent text-white rounded-md shadow-lg border border-gray-600 z-50">
+          <ListboxOptions className="absolute top-full left-0 mt-1 w-full bg-transparent text-white rounded-md shadow-lg border border-gray-300 z-50">
             {rooms.map((room, index) => (
               <ListboxOption
                 key={index}
