@@ -69,29 +69,29 @@ const StyledWrapper = styled.div`
   }
 
   .radio-input:checked + .radio-tile {
-    border-color: #4d8bff;
+    border-color: #fff;
     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
-    color: #4d8bff;
+    color: #ffffff;
   }
 
   .radio-input:checked + .radio-tile:before {
     transform: scale(1);
     opacity: 1;
-    background-color: #4d8bff;
-    border-color: #4d8bff;
+    background-color: #fff;
+    border-color: #fff;
   }
 
   .radio-input:checked + .radio-tile .radio-icon svg {
-    fill: #4d8bff;
+    fill: #fff;
   }
 
   .radio-input:checked + .radio-tile .radio-label {
-    color: #4d8bff;
+    color: #fff;
   }
 
   .radio-input:focus + .radio-tile {
-    border-color: #4d8bff;
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1), 0 0 0 4px #3a6abf;
+    border-color: #fff;
+    // box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1), 0 0 0 4px #3a6abf;
   }
 
   .radio-input:focus + .radio-tile:before {
@@ -107,9 +107,9 @@ const StyledWrapper = styled.div`
     width: 100%;
     min-height: 60px;
     border-radius: 0.5rem;
-    border: 2px solid #4a5265;
-    background-color: #1e2129;
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.05);
+    border: 2px solid #73737399;
+    background-color: #73737399;
+    // box-shadow: 0 5px 10px rgba(255, 255, 255, 0.05);
     transition: 0.15s ease;
     cursor: pointer;
     position: relative;
@@ -121,8 +121,8 @@ const StyledWrapper = styled.div`
     display: block;
     width: 0.75rem;
     height: 0.75rem;
-    border: 2px solid #4a5265;
-    background-color: #1e2129;
+    border: 2px solid #73737399;
+    background-color: #73737399;
     border-radius: 50%;
     top: 0.25rem;
     left: 0.25rem;
@@ -132,7 +132,7 @@ const StyledWrapper = styled.div`
   }
 
   .radio-tile:hover {
-    border-color: #4d8bff;
+    border-color: #73737399;
   }
 
   .radio-tile:hover:before {
@@ -143,7 +143,7 @@ const StyledWrapper = styled.div`
   .radio-icon svg {
     width: 2rem;
     height: 2rem;
-    fill: #b6b6b6;
+    fill: #fff;
   }
 
   .radio-label {
