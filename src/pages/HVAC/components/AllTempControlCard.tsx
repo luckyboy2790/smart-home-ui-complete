@@ -32,7 +32,7 @@ const ClimateControllCard = ({
 
   return (
     <StyledWrapper status={status}>
-      <div className="card 2xl:min-h-[calc(100vh-250px)] h-auto">
+      <div className="card 2xl:min-h-[calc(100vh-250px)] h-auto hover:!bg-[#3b3b3baf]">
         <div className="heading uppercase flex justify-start items-center">
           <img src={thermostatIcon} alt="thermostat" className="w-14 h-14" />
           Thermostat
@@ -90,10 +90,12 @@ const ClimateControllCard = ({
 };
 
 const StyledWrapper = styled.div<WrapperProps>`
+  height: 100%;
+
   .card {
     position: relative;
     width: 100%;
-    background: linear-gradient(-45deg, #161616 0%, #000000 100%);
+    background: linear-gradient(-45deg, #8f8f8f8f 0%, #bdbdbdbf 100%);
     color: #81818144;
     display: flex;
     flex-direction: column;
@@ -113,10 +115,9 @@ const StyledWrapper = styled.div<WrapperProps>`
     width: 100%;
     height: 101.3%;
     border-radius: 10px;
-    background: ${({ status }) =>
-      status === "cooling"
-        ? "linear-gradient(-45deg, #0080ff 0%, #0055ff 10%)"
-        : "linear-gradient(-45deg, #ff0000 0%, #d80000 10%)"};
+    background-color: ${({ status }) =>
+      status === "cooling" ? "#0080ff80" : "#d8000080"};
+    transition: background-color 0.8s ease-in-out, transform 0.8s ease-in-out;
     z-index: -10;
     pointer-events: none;
     transition: all 0.8s cubic-bezier(0.175, 0.95, 0.9, 1.275);
@@ -124,14 +125,12 @@ const StyledWrapper = styled.div<WrapperProps>`
   }
 
   .heading {
-    font-size: 20px;
     text-transform: capitalize;
-    font-weight: 900;
     color: white;
-  }
-
-  .card p:not(.heading) {
-    font-size: 18px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .card p:last-child {
