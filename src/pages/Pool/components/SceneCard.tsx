@@ -22,7 +22,7 @@ const StyledWrapper = styled.div<{ $tempStatus: "cooling" | "heating" }>`
     height: calc(100vh - 250px);
     min-height: 600px;
     margin: 0 auto;
-    background-color: #000;
+    background-color: #c5c5c585;
     border-radius: 8px;
     z-index: 1;
     box-shadow: ${({ $tempStatus }) =>

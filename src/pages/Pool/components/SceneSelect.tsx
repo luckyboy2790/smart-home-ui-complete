@@ -82,24 +82,24 @@ const StyledWrapper = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid #555;
+    border: 2px solid #fff;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   .radio-button__input:checked + .radio-button__label .radio-button__custom {
     transform: translateY(-50%) scale(0.9);
-    border: 5px solid #4c8bf5;
-    color: #4c8bf5;
+    border: 5px solid #fff;
+    color: #fff;
   }
 
   .radio-button__input:checked + .radio-button__label {
-    color: #4c8bf5;
+    color: #fff;
   }
 
   .radio-button__label:hover .radio-button__custom {
     transform: translateY(-50%) scale(1.2);
-    border-color: #4c8bf5;
-    box-shadow: 0 0 10px #4c8bf580;
+    border-color: #fff;
+    box-shadow: 0 0 10px #ffffff80;
   }
 `;
 
