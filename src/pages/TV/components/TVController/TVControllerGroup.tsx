@@ -17,7 +17,7 @@ const TVControllerGroup = () => {
           <TVControllerButton />
         </div>
 
-        <div className="bg-[#4d4d4d] sm:w-30 w-24 sm:h-30 h-24 rounded-full text-xs text-white flex items-center justify-center uppercase duration-200 active:scale-90 cursor-pointer">
+        <div className="bg-[#3f3d3d6b] sm:w-30 w-24 sm:h-30 h-24 rounded-full text-xs text-white flex items-center justify-center uppercase duration-200 active:scale-90 cursor-pointer">
           select
         </div>
       </div>

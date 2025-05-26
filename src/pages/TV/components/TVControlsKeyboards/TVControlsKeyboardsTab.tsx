@@ -64,22 +64,22 @@ const StyledWrapper = styled.div`
   }
 
   .mydict input[type="radio"]:checked + span {
-    box-shadow: 0 0 0 0.0625em #4d82ff;
-    background-color: #1c2b4a;
+    box-shadow: 0 0 0 0.0625em #959595;
+    background-color: #4a5565fc;
     z-index: 1;
-    color: #4d82ff;
+    color: #fff;
   }
 
   label span {
     display: block;
     cursor: pointer;
-    background-color: #1e2635;
+    background-color: #4a5565d1;
     padding: 0.375em 0.75em;
     position: relative;
     margin-left: 0.0625em;
-    box-shadow: 0 0 0 0.0625em #4a5568;
+    box-shadow: 0 0 0 0.0625em #737373d1;
     letter-spacing: 0.05em;
-    color: #a0aec0;
+    color: #ffffff;
     text-align: center;
     transition: background-color 0.5s ease;
   }

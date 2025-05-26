@@ -8,9 +8,10 @@ const TVControllerButton = () => {
         src={TVControllerIcon}
         alt="button"
         className="cursor-pointer sm:w-54 w-40"
+        draggable={false}
         style={{
-          filter:
-            "invert(30%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%) drop-shadow(2px 2px 4px 4px rgba(115, 115, 115, 0.5))",
+          opacity: 0.3,
+          filter: "brightness(10%) invert(10%)",
         }}
       />
 
