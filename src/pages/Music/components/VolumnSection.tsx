@@ -36,7 +36,7 @@ const ShareCardData = [
 
 const VolumnSection = () => {
   return (
-    <div className="RoomSection min-h-[600px] w-full bg-[#07182E] rounded-2xl relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,183,255,0.5)]">
+    <div className="RoomSection min-h-[600px] w-full bg-[#bfbfbfd1] rounded-2xl relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,183,255,0.5)]">
       <div className="card-content h-[calc(100vh-250px)] min-h-[600px] p-4 relative z-10 flex flex-col gap-5">
         <VolumnSliderSection />
         <div className="flex flex-col gap-3 p-2 overflow-y-auto">

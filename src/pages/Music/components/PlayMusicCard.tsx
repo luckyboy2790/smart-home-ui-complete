@@ -68,7 +68,7 @@ const StyledWrapper = styled.div`
     cursor: pointer;
     font-weight: 900;
     transition-duration: 0.2s;
-    background: linear-gradient(0deg, #000, #272727);
+    background: #5d5d5dd9;
   }
 
   .card:before,

@@ -27,11 +27,11 @@ const PlayListSection = () => {
           </div>
         </div>
       </div>
-       <ul className="w-full grow flex flex-col overflow-y-auto">
+      <ul className="w-full grow flex flex-col overflow-y-auto">
         {PlayList.map((song, index) => (
           <li
             key={index}
-            className="px-2 py-4 text-white bg-transparent border-b-2 border-b-gray-700 cursor-pointer hover:border-gray-500 hover:rounded-[3px] hover:bg-[#555657] transition"
+            className="px-2 py-4 text-white bg-transparent border-b-2 border-b-[#ffffff2c] cursor-pointer hover:border-gray-500 hover:rounded-[3px] hover:bg-[#74747441] transition"
           >
             <p className="text-sm font-medium">{song.title}</p>
             <p className="text-xs text-gray-400">{song.artist}</p>
