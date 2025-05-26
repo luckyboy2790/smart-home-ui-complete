@@ -76,7 +76,7 @@ const SecurityKeyPad = ({
           <div
             key={i}
             className={`w-5 h-5 rounded-full ${
-              pin.length > i ? "bg-white" : "bg-gray-500"
+              pin.length > i ? "bg-white" : "bg-[#143d03]"
             }`}
           ></div>
         ))}
@@ -98,7 +98,7 @@ const SecurityKeyPad = ({
         ].map((item, index) => (
           <button
             key={index}
-            className="w-18 h-18 flex flex-col items-center justify-center text-lg font-bold rounded-full bg-gray-800 hover:bg-gray-700"
+            className="w-18 h-18 flex flex-col items-center justify-center text-lg font-bold rounded-full bg-[#143d03] hover:bg-[#143d03]/80"
             onClick={() => {
               if (item.num !== undefined) handleNumberClick(item.num);
               if (item.action === "clear") handleClear();

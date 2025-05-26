@@ -42,7 +42,7 @@ const ZonesSection = () => {
   const confirmDialog = useConfirmDialog();
 
   return (
-    <div className="card w-full h-full bg-[#07182E] rounded-2xl relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,183,255,0.5)]">
+    <div className="card w-full h-full bg-[#ffffff80] rounded-2xl relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,183,255,0.5)]">
       <div className="card-content h-[calc(100vh-250)] p-4 relative z-10 flex flex-col gap-5">
         <h6 className="text-3xl">Zones</h6>
         <div className="flex flex-col gap-5 h-[calc(100vh-340px)] min-h-[500px] py-7 px-4 justify-between overflow-auto">

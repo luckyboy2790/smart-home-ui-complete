@@ -11,14 +11,20 @@ const ZoneItemCard = ({
 }: {
   securityStatus: boolean;
   itemName: string;
-  showDialog: (opts: { title: string; description: string; confirmText: string; icon: ReactNode; onConfirm: () => void }) => void;
+  showDialog: (opts: {
+    title: string;
+    description: string;
+    confirmText: string;
+    icon: ReactNode;
+    onConfirm: () => void;
+  }) => void;
 }) => {
   const [doorStatus, setDoorStatus] = useState<boolean>(securityStatus);
 
   return (
     <button className="group relative">
-      <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-teal-500 via-emerald-500 to-green-500 opacity-20 blur-xl transition-all duration-500 group-hover:opacity-50 group-hover:blur-2xl" />
-      <div className="relative py-4 flex lg:flex-row flex-col items-center gap-2 rounded-xl border border-slate-800 bg-slate-950 pr-4 px-5">
+      <div className="absolute -inset-1 rounded-xl bg-gradient-to-r opacity-20 blur-xl transition-all duration-500 group-hover:opacity-50 group-hover:blur-2xl" />
+      <div className="relative py-4 flex lg:flex-row flex-col items-center gap-2 rounded-xl border border-[#5d5d5da1] bg-[#5d5d5da1] pr-4 px-5">
         <div
           className={classNames(
             "lg:w-1/3 w-full flex justify-start items-center gap-3 text-xl",

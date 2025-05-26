@@ -40,7 +40,7 @@ const StyledWrapper = styled.div<WrapperProps>`
   .card {
     position: relative;
     width: 100%;
-    background: linear-gradient(-45deg, #161616 0%, #000000 100%);
+    background: #6f6f6f7a;
     color: #81818144;
     display: flex;
     flex-direction: column;
