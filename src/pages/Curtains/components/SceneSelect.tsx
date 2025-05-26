@@ -67,12 +67,12 @@ const StyledWrapper = styled.div`
   }
   .radio-input label:hover::before {
     transition: all 0.2s ease;
-    background-color: #2a2e3c;
+    background-color: #7c7b7b80;
   }
 
   .radio-input .label:has(input:checked)::before {
-    background-color: #2d3750;
-    border-color: #435dd8;
+    background-color: #00000040;
+    border-color: #ffffff7a;
     height: 50px;
   }
   .radio-input .label .text {
@@ -80,7 +80,7 @@ const StyledWrapper = styled.div`
   }
 
   .radio-input .label input[type="radio"] {
-    background-color: #202030;
+    background-color: #3d3d3d;
     appearance: none;
     width: 17px;
     height: 17px;
@@ -90,15 +90,15 @@ const StyledWrapper = styled.div`
     align-items: center;
   }
   .radio-input .label input[type="radio"]:checked {
-    background-color: #435dd8;
+    background-color: #3d3d3d;
     -webkit-animation: puls 0.7s forwards;
     animation: pulse 0.7s forwards;
   }
 
   .radio-input .label input[type="radio"]:before {
     content: "";
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: #fff;
