@@ -63,7 +63,7 @@ const StyledWrapper = styled.div<WrapperProps>`
     border-radius: 10px;
     background-color: ${({ status }) =>
       status === "ready"
-        ? "#04ff00"
+        ? "#ffffffb3"
         : status === "success"
         ? "#0080ff"
         : "#d80000"};
@@ -97,7 +97,7 @@ const StyledWrapper = styled.div<WrapperProps>`
     transform: scaleX(1.02) scaleY(1.02);
     box-shadow: ${({ status }) =>
       status === "ready"
-        ? "0px 0px 30px 0px hsla(115, 100%, 50%, 0.5)"
+        ? "0px 0px 30px 0px hsla(255, 255, 255, 0.5)"
         : status === "success"
         ? "0px 0px 30px 0px hsla(210, 100%, 50%, 0.5)"
         : "0px 0px 30px 0px hsla(0, 100%, 50%, 0.5)"};
