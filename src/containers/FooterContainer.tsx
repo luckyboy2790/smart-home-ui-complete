@@ -1,7 +1,11 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const DRAG_THRESHOLD = 5;
-const FooterContainer = () => {
+const FooterContainer = ({
+  handleChange,
+}: {
+  handleChange: (value: string) => void;
+}) => {
   const [selected, setSelected] = useState("Living Room");
   const scrollRef = useRef<HTMLDivElement>(null);
   const isDraggingRef = useRef(false);
@@ -9,7 +13,7 @@ const FooterContainer = () => {
   const startXRef = useRef(0);
   const scrollLeftRef = useRef(0);
 
-  const items = ["Living Room", "Bathroom", "Kitchen", "Backyard", "Garage"];
+  const items = ["Living Room", "Bathroom", "Kitchen", "Bedroom", "Garage"];
 
   const startDrag = (x: number) => {
     dragStartedRef.current = true;
@@ -26,6 +30,14 @@ const FooterContainer = () => {
       scrollRef.current.scrollLeft = scrollLeftRef.current - dx;
     }
   };
+
+  useEffect(() => {
+    const storedRoom = localStorage.getItem("selectedRoom");
+    if (storedRoom) {
+      setSelected(storedRoom);
+      handleChange(storedRoom);
+    }
+  }, []);
 
   const endDrag = () => {
     dragStartedRef.current = false;
@@ -70,7 +82,11 @@ const FooterContainer = () => {
           {items.map((item) => (
             <button
               key={item}
-              onClick={() => setSelected(item)}
+              onClick={() => {
+                setSelected(item);
+                handleChange(item);
+                localStorage.setItem("selectedRoom", item);
+              }}
               className={`flex px-5 md:h-13 h-10 w-auto items-center justify-center rounded-full group transition-all duration-200 hover:bg-[#666666b4] ${
                 selected === item
                   ? "bg-[#9e9e9ecc] text-white"
