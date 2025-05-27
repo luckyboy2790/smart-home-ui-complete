@@ -33,8 +33,8 @@ const PlayListSection = () => {
             key={index}
             className="px-2 py-4 text-white bg-transparent border-b-2 border-b-[#ffffff2c] cursor-pointer hover:border-gray-500 hover:rounded-[3px] hover:bg-[#74747441] transition"
           >
-            <p className="text-sm font-medium">{song.title}</p>
-            <p className="text-xs text-gray-400">{song.artist}</p>
+            <p className="text-[16px] font-medium">{song.title}</p>
+            <p className="text-xs text-gray-200">{song.artist}</p>
           </li>
         ))}
       </ul>

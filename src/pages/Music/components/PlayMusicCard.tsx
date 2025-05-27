@@ -6,13 +6,14 @@ import { FaList, FaRegWindowClose } from "react-icons/fa";
 
 const Card = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isPlay, setIsPlay] = useState<boolean>(false);
 
   return (
-    <StyledWrapper>
+    <StyledWrapper isPlay={isPlay}>
       <div className="card">
         <div className="w-full relative overflow-x-hidden flex flex-row h-full overflow-y-hidden">
           <div className="md:w-3/5 w-full h-full px-5 flex flex-col justify-evenly items-center">
-            <PlayingSection />
+            <PlayingSection isPlay={isPlay} setIsPlay={setIsPlay} />
           </div>
           <div className="w-2/5 hidden md:flex">
             <div className="w-full h-full hidden md:flex flex-col items-start justify-between gap-3 p-4">
@@ -42,7 +43,7 @@ const Card = () => {
   );
 };
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.div<{ isPlay: boolean }>`
   min-height: 600px;
 
   .card {
@@ -68,7 +69,7 @@ const StyledWrapper = styled.div`
     cursor: pointer;
     font-weight: 900;
     transition-duration: 0.2s;
-    background: #5d5d5dd9;
+    background: ${(props) => (props.isPlay ? "#898989c4" : "#bfbfbfb0")};
   }
 
   .card:before,
@@ -78,24 +79,28 @@ const StyledWrapper = styled.div`
     left: -2px;
     top: -2px;
     border-radius: 10px;
-    background: linear-gradient(
-      45deg,
-      #fb0094,
-      #0000ff,
-      #00ff00,
-      #ffff00,
-      #ff0000,
-      #fb0094,
-      #0000ff,
-      #00ff00,
-      #ffff00,
-      #ff0000
-    );
-    background-size: 400%;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    z-index: -1;
-    animation: steam 20s linear infinite;
+    ${(props) =>
+      props.isPlay &&
+      `
+        background: linear-gradient(
+          45deg,
+          #fb0094,
+          #0000ff,
+          #00ff00,
+          #ffff00,
+          #ff0000,
+          #fb0094,
+          #0000ff,
+          #00ff00,
+          #ffff00,
+          #ff0000
+        );
+        background-size: 400% 100%;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        z-index: -1;
+        animation: steam 20s linear infinite;
+      `}
   }
 
   @keyframes steam {
@@ -144,7 +149,7 @@ const StyledWrapper = styled.div`
   .card__subtitle {
     font-weight: 400;
     font-size: 16px;
-    color: var(--sub-main-color);
+    color: white;
     text-align: center;
     cursor: pointer;
   }

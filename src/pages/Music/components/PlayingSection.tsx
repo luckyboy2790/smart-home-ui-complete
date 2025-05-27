@@ -6,8 +6,15 @@ import {
   MdFastRewind,
 } from "react-icons/md";
 import { FaPlay } from "react-icons/fa";
+import { CgPlayPause } from "react-icons/cg";
 
-const PlayingSection = () => {
+const PlayingSection = ({
+  isPlay,
+  setIsPlay,
+}: {
+  isPlay: boolean;
+  setIsPlay: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   return (
     <>
       <div className="card__img">
@@ -30,7 +37,14 @@ const PlayingSection = () => {
           <MdSkipPrevious />
         </button>
         <button className="card__btn card__btn-play">
-          <FaPlay />
+          {isPlay ? (
+            <CgPlayPause
+              onClick={() => setIsPlay(false)}
+              className="text-8xl"
+            />
+          ) : (
+            <FaPlay onClick={() => setIsPlay(true)} className="text-4xl" />
+          )}
         </button>
         <button className="card__btn">
           <MdSkipNext />
