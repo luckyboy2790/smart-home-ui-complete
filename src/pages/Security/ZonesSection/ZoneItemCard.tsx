@@ -28,7 +28,7 @@ const ZoneItemCard = ({
         <div
           className={classNames(
             "lg:w-1/3 w-full flex justify-start items-center gap-3 text-xl",
-            !doorStatus && "text-orange-600"
+            !doorStatus && "text-red-500"
           )}
         >
           {!doorStatus && <IoWarning />}
@@ -48,7 +48,7 @@ const ZoneItemCard = ({
             <div
               className={classNames(
                 "w-6 h-6 rounded-full",
-                !doorStatus ? "bg-orange-600" : "bg-gray-600"
+                !doorStatus ? "bg-red-500" : "bg-gray-600"
               )}
             ></div>
             <span className="text-xs uppercase">Trouble</span>
