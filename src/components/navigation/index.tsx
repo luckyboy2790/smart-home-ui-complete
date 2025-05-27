@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Props } from "../../types";
 
-const DRAG_THRESHOLD = 5; // px
-const CLICK_DURATION_THRESHOLD = 300; // ms
+const DRAG_THRESHOLD = 5;
+const CLICK_DURATION_THRESHOLD = 300;
 
 const Navigation = ({ children }: Props) => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -36,7 +36,6 @@ const Navigation = ({ children }: Props) => {
     dragStartedRef.current = false;
   };
 
-  // Mouse events
   const onMouseDown = (e: React.MouseEvent) => startDrag(e.clientY);
 
   const onMouseMove = (e: React.MouseEvent) => {
@@ -47,7 +46,6 @@ const Navigation = ({ children }: Props) => {
   const onMouseUp = () => endDrag();
   const onMouseLeave = () => endDrag();
 
-  // Touch events
   const onTouchStart = (e: React.TouchEvent) => startDrag(e.touches[0].clientY);
 
   const onTouchMove = (e: React.TouchEvent) => {
@@ -57,10 +55,13 @@ const Navigation = ({ children }: Props) => {
 
   const onTouchEnd = () => endDrag();
 
-  // Click capture to block accidental clicks after drag
   const onClickCapture = (e: React.MouseEvent) => {
     const duration = Date.now() - dragStartTimeRef.current;
-    if (isDraggingRef.current || dragDistanceRef.current > DRAG_THRESHOLD || duration > CLICK_DURATION_THRESHOLD) {
+    if (
+      isDraggingRef.current ||
+      dragDistanceRef.current > DRAG_THRESHOLD ||
+      duration > CLICK_DURATION_THRESHOLD
+    ) {
       e.preventDefault();
       e.stopPropagation();
       isDraggingRef.current = false;
@@ -82,8 +83,12 @@ const Navigation = ({ children }: Props) => {
           onTouchEnd={onTouchEnd}
           onClickCapture={onClickCapture}
           style={{
-            cursor: dragStartedRef.current ? (isDraggingRef.current ? "grabbing" : "grab") : "grab",
-            userSelect: "none"
+            cursor: dragStartedRef.current
+              ? isDraggingRef.current
+                ? "grabbing"
+                : "grab"
+              : "grab",
+            userSelect: "none",
           }}
         >
           {children}

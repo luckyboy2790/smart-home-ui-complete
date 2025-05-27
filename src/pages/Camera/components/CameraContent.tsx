@@ -3,7 +3,7 @@ import CameraControllerSection from "./CameraControllerSection";
 import CameraSelect from "./CameraSelectSection";
 import CameraZoomSection from "./CameraZoomSection";
 
-const AUTO_HIDE_DELAY = 5000; // 5 seconds
+const AUTO_HIDE_DELAY = 5000;
 
 const CameraContent = () => {
   const [showControls, setShowControls] = useState(false);
@@ -18,7 +18,7 @@ const CameraContent = () => {
     }
 
     return () => {
-      clearTimeout(timeout); // Cleanup on unmount or re-show
+      clearTimeout(timeout);
     };
   }, [showControls]);
 

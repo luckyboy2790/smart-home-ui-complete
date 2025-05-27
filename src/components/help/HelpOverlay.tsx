@@ -10,7 +10,6 @@ interface HelpOverlayProps {
 const HelpOverlay: React.FC<HelpOverlayProps> = ({ onClose }) => {
   const [language, setLanguage] = useState<string>("English");
 
-  // Close overlay on Escape key
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -37,7 +36,7 @@ const HelpOverlay: React.FC<HelpOverlayProps> = ({ onClose }) => {
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -30, opacity: 0 }}
-          onClick={(e) => e.stopPropagation()} // Prevent closing on inner click
+          onClick={(e) => e.stopPropagation()}
         >
           {/* Close Button */}
           <button
